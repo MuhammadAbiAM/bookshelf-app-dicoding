@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    position: relative;
+    min-height: 100vh;
+    background: url('https://wallpapercave.com/wp/wp6011723.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    background: #30afe2;
+    padding: 5px;
+    padding-left: 30px;
+    color: white;
+}
+
+h1 {
+    font-family: 'Merriweather', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+main {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+section {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 45vw;
+    border-radius: 20px
+}
+
+h2 {
+    font-family: 'Merriweather', sans-serif;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: #30afe2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form button {
+    width: auto;
+    padding: 10px 15px;
+    display: block;
+    align-self: flex-end;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #30afe2;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button i {
+    font-size: 16px;
+    margin: 0;
+}
+
+button:hover {
+    background-color: #218cb3;
+}
+
+.search-section {
+    height: 30%;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border-radius: 20px;
+}
+
+.search-section form {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 2fr 0.5fr;
+    border-radius: 10px;
+}
+
+.search-section form label {
+    display: flex;
+    align-items: center;
+}
+
+.search-section form input {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.search-section form button {
+    background-color: #30afe2;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search-section form button:hover {
+    background-color: #218cb3;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book-item {
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.book-item h3 {
+    margin: 0;
+    color: #333;
+}
+
+.book-item p {
+    margin: 0;
+    color: #666;
+}
+
+.book-item div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.complete {
+    background-color: #5cb85c;
+}
+
+.complete:hover {
+    background-color: #4cae4c;
+}
+
+.delete {
+    background-color: #d9534f;
+}
+
+.delete:hover {
+    background-color: #c9302c;
+}
+
+.edit {
+    background-color: #f0ad4e;
+}
+
+.edit:hover {
+    background-color: #ec971f;
+}
+
+/* Hilangkan border bawah dari SweetAlert2 */
+.swal2-popup {
+    border-bottom: none !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Jika border bawah masih muncul, coba targetkan elemen header */
+.swal2-title {
+    border-bottom: none !important;
+}
+
+/* Pastikan tidak ada border di bagian footer juga */
+/* .swal2-footer {
+    border-top: none !important;
+} */
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        padding-left: 30px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    form button {
+        width: auto;
+        padding: 10px 15px;
+        display: block;
+        margin-left: auto;
+    }
+
+    .search_section form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .search_section form input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .search_section form button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 1px;
+        padding-left: 30px;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .search_section form input {
+        width: 100%;
+    }
+
+    .search_section form button {
+        width: 20vw;
+    }
+}
